@@ -11,67 +11,8 @@
 /* ************************************************************************** */
 #include <unistd.h>
 #include <stdlib.h>
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*result;
-	size_t	length;
 
-	if (s == NULL)
-		return (NULL);
-	length = ft_strlen((char *)s);
-	if (start > length)
-		return (ft_strdup(""));
-	if (length - start >= len)
-		result = (char *)malloc((len + 1) * sizeof(char));
-	else
-		result = (char *)malloc((length - start + 1) * sizeof(char));
-	if (result == NULL)
-		return (NULL);
-	ft_strlcpy(result, (char *)&s[start], (len + 1));
-	return (result);
-}
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-char	*ft_strchr(const char *s, int c)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	if ((char)c == s[i])
-		return ((char *)&s[i]);
-	return (NULL);
-}
-char	*ft_strdup(const char *str)
-{
-	char	*string;
-	size_t	i;
-
-	string = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
-	if (string == NULL)
-		return (NULL);
-	i = 0;
-	while (str[i] != '\0')
-	{
-		string[i] = str[i];
-		i++;
-	}
-	string[i] = '\0';
-	return (string);
-}
 
 char	*move_line(char *s)
 {
