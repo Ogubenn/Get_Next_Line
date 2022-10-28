@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ogdurkan <ogdurkan@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 09:42:42 by ogdurkan          #+#    #+#             */
-/*   Updated: 2022/10/28 09:42:44 by ogdurkan         ###   ########.fr       */
+/*   Created: 2022/10/28 09:42:28 by ogdurkan          #+#    #+#             */
+/*   Updated: 2022/10/28 09:42:29 by ogdurkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-int	sourcenewline(char *str)
-{
-	int i;
-	int b;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\n')
-			b = 1;
-		if (str[i] != '\n')
-			b = 0;
-			i++;
-			}
-	return (b);
-}
-/*size_t	ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
 	size_t	i;
 
@@ -138,10 +122,4 @@ char	*ft_new_left_str(char *left_str)
 	str[j] = '\0';
 	free(left_str);
 	return (str);
-}*/
-#include <stdio.h>
-int main()
-{
-	char a[] = "as\ndasd";
-	printf("%d\n",sourcenewline(a));
 }
