@@ -21,7 +21,7 @@ char	*ft_read_to_left_str(int fd, char *left_str)
 	if (!buff)
 		return (NULL);
 	rd_bytes = 1;
-	while (!sourcenewline(left_str) && rd_bytes != 0)
+	while (!ft_strchr(left_str, '\n') && rd_bytes != 0)
 	{
 		rd_bytes = read(fd, buff, BUFFER_SIZE);
 		if (rd_bytes == -1)
