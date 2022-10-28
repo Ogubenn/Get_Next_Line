@@ -21,14 +21,17 @@ int	sourcenewline(char *str)
 	while (str[i])
 	{
 		if (str[i] == '\n')
+		{
 			b = 1;
+			break;
+		}
 		if (str[i] != '\n')
 			b = 0;
 			i++;
 			}
 	return (b);
 }
-/*size_t	ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
 	size_t	i;
 
@@ -138,10 +141,10 @@ char	*ft_new_left_str(char *left_str)
 	str[j] = '\0';
 	free(left_str);
 	return (str);
-}*/
-#include <stdio.h>
+}
+/*#include <stdio.h>
 int main()
 {
-	char a[] = "as\ndasd";
+	char a[] = "asda\nsd";
 	printf("%d\n",sourcenewline(a));
-}
+}*/

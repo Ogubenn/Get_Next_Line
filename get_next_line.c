@@ -21,7 +21,7 @@ char	*ft_read_to_left_str(int fd, char *left_str)
 	if (!buff)
 		return (NULL);
 	rd_bytes = 1;
-	while (!ft_strchr(left_str, '\n') && rd_bytes != 0)
+	while (!sourcenewline(left_str) && rd_bytes != 0)
 	{
 		rd_bytes = read(fd, buff, BUFFER_SIZE);
 		if (rd_bytes == -1)
@@ -50,3 +50,16 @@ char	*get_next_line(int fd)
 	left_str = ft_new_left_str(left_str);
 	return (line);
 }
+#include <stdio.h>
+ int		main()
+ {
+     char *line;
+
+     int fd1 = open("a.txt",O_RDONLY);
+     line = get_next_line(fd1);
+ 	printf("%s",line);
+
+ 	close(fd1);
+
+ }
+

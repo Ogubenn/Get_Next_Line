@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
@@ -27,5 +28,7 @@ char	*ft_strjoin(char *left_str, char *buff);
 char	*ft_get_line(char *left_str);
 char	*ft_new_left_str(char *left_str);
 char	*get_next_line(int fd);
+int	sourcenewline(char *str);
+
 
 #endif
