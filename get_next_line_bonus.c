@@ -50,3 +50,25 @@ char	*get_next_line(int fd)
 	left_str[fd] = ft_new_left_str(left_str[fd]);
 	return (line);
 }
+#include <stdio.h>
+ int		main()
+ {
+     char *line;
+
+     int fd1 = open("b.txt",O_RDONLY);
+	 int fd2 = open("a.txt",O_RDONLY);
+      line = get_next_line(fd1);
+ 	 printf("%s\n",line);
+	 char *line2 = get_next_line(fd2);
+ 	 printf("%s\n",line2);
+	    line = get_next_line(fd1);
+ 	 printf("%s\n",line);
+	 	line2 = get_next_line(fd2);
+ 	 printf("%s\n",line2);
+	// printf("%d\n",fd2);
+	// printf("%d\n",fd1);
+	
+
+ 	close(fd1);
+
+ }
