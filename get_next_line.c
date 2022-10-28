@@ -58,6 +58,10 @@ char	*get_next_line(int fd)
      int fd1 = open("a.txt",O_RDONLY);
      line = get_next_line(fd1);
  	printf("%s",line);
+	line = get_next_line(fd1);
+	printf("%s",line);
+	line = get_next_line(fd1);
+	printf("%s",line);
 
  	close(fd1);
 
