@@ -12,25 +12,6 @@
 
 #include "get_next_line.h"
 
-int	sourcenewline(char *str)
-{
-	int i;
-	int b;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\n')
-		{
-			b = 1;
-			break;
-		}
-		if (str[i] != '\n')
-			b = 0;
-			i++;
-			}
-	return (b);
-}
 size_t	ft_strlen(char *s)
 {
 	size_t	i;
@@ -142,9 +123,3 @@ char	*ft_new_left_str(char *left_str)
 	free(left_str);
 	return (str);
 }
-/*#include <stdio.h>
-int main()
-{
-	char a[] = "asda\nsd";
-	printf("%d\n",sourcenewline(a));
-}*/
