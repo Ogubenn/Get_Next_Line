@@ -50,7 +50,7 @@ char	*get_next_line(int fd)
 	left_str[fd] = ft_new_left_str(left_str[fd]);
 	return (line);
 }
-#include <stdio.h>
+/*#include <stdio.h>
  int		main()
  {
      char *line;
@@ -71,4 +71,4 @@ char	*get_next_line(int fd)
 
  	close(fd1);
 
- }
+ }*/
